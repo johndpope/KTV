@@ -1,0 +1,10 @@
+framework module KTVKit {
+  umbrella header "KTVKit.h"
+
+  export *
+  module * { export * }
+}
+
+module KTVKit.Swift {
+    header "KTVKit-Swift.h"
+}
