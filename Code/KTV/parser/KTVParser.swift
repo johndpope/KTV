@@ -424,7 +424,7 @@ public class KTVParser {
         _nextCharIsScreened = false
     }
 
-    private func parse() throws -> KTVObject {
+    public func parse() throws -> KTVObject {
         _state = .Root
 
         do {
@@ -435,15 +435,11 @@ public class KTVParser {
             throw error
         }
 
-        return _currentElement
-    }
+        var result = _currentElement
+        if _currentArray.count != 0 {
+            result = KTVArray(values:KTVValue.array(tryToDetermineTypeStringFromArrayValue(_currentArray), _currentArray))
+        }
 
-    public func parseAsObject() throws -> KTVObject {
-        return try parse()
-    }
-
-    public func parseAsArray() throws -> KTVArray {
-        try parse()
-        return KTVArray(values:KTVValue.array(tryToDetermineTypeStringFromArrayValue(_currentArray), _currentArray))
+        return result
     }
 }

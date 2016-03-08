@@ -247,27 +247,27 @@ extension KTVObject {
 
     //MARK: plain values
 
-    func string(key key:String, defaultValue:String? = "") throws -> String? {
+    public func string(key key:String, defaultValue:String? = "") throws -> String? {
         return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.stringResolver).value
     }
 
-    func double(key key:String, defaultValue:Double? = 0.0) throws -> Double? {
+    public func double(key key:String, defaultValue:Double? = 0.0) throws -> Double? {
         return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.doubleResolver).value
     }
 
-    func int(key key:String, defaultValue:Int? = 0) throws -> Int? {
+    public func int(key key:String, defaultValue:Int? = 0) throws -> Int? {
         return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.intResolver).value
     }
 
-    func bool(key key:String, defaultValue:Bool? = false) throws -> Bool? {
+    public func bool(key key:String, defaultValue:Bool? = false) throws -> Bool? {
         return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.boolResolver).value
     }
 
-    func nsDate(key key:String, defaultValue:NSDate? = NSDate()) throws -> NSDate? {
+    public func nsDate(key key:String, defaultValue:NSDate? = NSDate()) throws -> NSDate? {
         return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.dateResolver).value
     }
 
-    func array<T>(key key:String, defaultValue:[T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [T]? {
+    public func array<T>(key key:String, defaultValue:[T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [T]? {
         let (resultValue, _) = try valueAndReferenceForKey(key, resolveReferences:true)
         var result:[T]? = defaultValue
 
@@ -280,7 +280,7 @@ extension KTVObject {
         return result
     }
 
-    func dictionary<T>(key key:String, defaultValue:[String:T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [String:T]? {
+    public func dictionary<T>(key key:String, defaultValue:[String:T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [String:T]? {
         let (resultValue, _) = try valueAndReferenceForKey(key, resolveReferences:true)
         var result:[String:T]? = defaultValue
 

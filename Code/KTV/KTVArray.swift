@@ -5,16 +5,33 @@
 
 import Foundation
 
-public class KTVArray: CustomStringConvertible {
-    private var values_:KTVValue = KTVValue.array("", [])
-
+public class KTVArray: KTVObject {
     init(values:KTVValue) {
-        values_ = values
+        super.init()
+        setProperty(name:"__array__", value:values)
+    }
+}
+
+extension KTVArray {
+    public var count:Int {
+        get {
+            if let array = properties["__array__"] {
+                if case KTVValue.array(_, let values) = array {
+                    return values.count
+                }
+            }
+
+            return 0
+        }
     }
 
-    //MARK - CustomStringConvertible
+    public subscript (index:Int) -> KTVValue {
+        if let array = properties["__array__"] {
+            if case KTVValue.array(_, let values) = array {
+                return values[index]
+            }
+        }
 
-    public var description: String {
-        return values_.description
+        return KTVValue.nilValue
     }
 }
