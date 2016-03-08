@@ -6,7 +6,7 @@ It is a prototype library for the parsing of ktv, format that is close to JSON, 
 
 It looks like this:
 
-```
+```swift
 // it does have comments.
 // file can contain an array or an object, same as JSON
 {
@@ -55,7 +55,7 @@ Presumably, simply use KTVKit.framework from _binaries, that is all.
 
 #### Reading KTV and JSON files
 
-```
+```swift
 let parser = KTVParser(fileName:filePath)
 let ktvObject:KTVObject = try parser.parse()
 ```
@@ -67,7 +67,8 @@ parser can return `KTVObject` or its descendant, `KTVArray`.
 Everything is stored in a dictionary-like structure, that is called `properties`. Keys are `Strings`, values are enum `KTVValue`. Properties can be accessed via subscript (by key in the case of object and by index, if it is a KTVArray.
 
 If you need some value and do not want to mess with `KTVValue` enum, you can use methods:
-```
+
+```swift
 public func string(key key:String, defaultValue:String? = "") throws -> String?
 public func double(key key:String, defaultValue:Double? = 0.0) throws -> Double?
 public func int(key key:String, defaultValue:Int? = 0) throws -> Int?
@@ -76,6 +77,7 @@ public func nsDate(key key:String, defaultValue:NSDate? = NSDate()) throws -> NS
 public func array<T>(key key:String, defaultValue:[T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [T]?
 public func dictionary<T>(key key:String, defaultValue:[String:T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [String:T]?
 ```
+
 or similar methods for colors. These methods will automatically resolve references etc.
 
 But messing with raw values is not fun. Much better is to parse ktv into a model object (object hierarchy) and use it in a native way.
@@ -92,7 +94,7 @@ This can be done in several steps:
 
 Model object one, simple with @objc annotation
 
-```
+```swift
 @objc
 class ChildObject : NSObject, KTVModelObject {
     var somethingElse:String = ""
@@ -101,7 +103,7 @@ class ChildObject : NSObject, KTVModelObject {
 
 Model object two, more complex, with different types
 
-```
+```swift
 public struct RootObject: KTVModelObject {
     var date:NSDate
 
@@ -133,7 +135,7 @@ Executing ktvModelGenerator
 
 Generated code (interface only, without private methods) 
 
-```
+```swift
 extension RootObject: KTVParseable {
     public init?(ktvStrict ktv:KTVObject)
     public init(ktvLenient ktv:KTVObject)
