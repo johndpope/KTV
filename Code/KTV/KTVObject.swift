@@ -210,16 +210,16 @@ extension KTVObject {
         return (result, reference)
     }
 
-    private func specificValueForKey<T>(key:String, defaultValue:T?, resolveReferences:Bool, valueResolver:(value:KTVValue) throws -> T?) throws -> (value:T?, reference:String?) {
-        let (resultValue, reference) = try valueAndReferenceForKey(key, resolveReferences:resolveReferences)
-        var result = defaultValue
+private func specificValueForKey<T>(key:String, defaultValue:T?, resolveReferences:Bool, valueResolver:(value:KTVValue) throws -> T?) throws -> (value:T?, reference:String?) {
+    let (resultValue, reference) = try valueAndReferenceForKey(key, resolveReferences:resolveReferences)
+    var result = defaultValue
 
-        if let result_ = resultValue {
-            result = try valueResolver(value:result_)
-        }
-
-        return (result, reference)
+    if let result_ = resultValue {
+        result = try valueResolver(value:result_)
     }
+
+    return (result, reference)
+}
 
     //MARK: values or references
 

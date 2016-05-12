@@ -16,8 +16,8 @@ public protocol KTVModelAnyMapper {}
 // это, вообще-то, абстрактный класс, которым нельзя пользоваться. Но, поскольку protocol with associated type — страшное говно,
 // приходится делать так
 public class KTVModelMapper<MappingType>: KTVModelAnyMapper {
-    func parseOptionalValue(ktvValue:KTVValue?, defaultValue:MappingType?) throws -> MappingType? { return nil }
-    func compose(value:MappingType?) throws -> KTVValue { return .nilValue }
+    public func parseOptionalValue(ktvValue:KTVValue?, defaultValue:MappingType?) throws -> MappingType? { return nil }
+    public func compose(value:MappingType?) throws -> KTVValue { return .nilValue }
 
     public func parseNotOptionalValue(ktvValue:KTVValue?, defaultValue:MappingType) throws -> MappingType {
         if let result = try parseOptionalValue(ktvValue, defaultValue:defaultValue) {
@@ -50,7 +50,7 @@ public class KTVModelMapperFactory {
     public func mapper<T>(type:String, propertyName:String) throws -> KTVModelMapper<T> {
         if let mapper = _mappersByPropertyName[propertyName] as? KTVModelMapper<T> {
             return mapper
-        } else if let mapper = _mappersByType[propertyName] as? KTVModelMapper<T> {
+        } else if let mapper = _mappersByType[type] as? KTVModelMapper<T> {
             return mapper
         } else {
             throw KTVModelObjectParseableError.CantFindTypeMapper

@@ -11,6 +11,12 @@ extension KTVValue {
     static func stringResolver(value:KTVValue) throws -> String? {
         if case .string(let result) = value {
             return result
+        } else if case .int(let result) = value {
+            return "\(result)"
+        } else if case .double(let result) = value {
+            return "\(result)"
+        } else if case .bool(let result) = value {
+            return "\(result)"
         } else if case .nilValue = value {
             return nil
         }

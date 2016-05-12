@@ -20,7 +20,7 @@ public struct KTVModelBasicMapper {
 //        return T(ktvLenient:KTVObject())
 //    }
 
-    static func printErrors(errors:[String:ErrorType]) {
+    public static func printErrors(errors:[String:ErrorType]) {
         if !errors.isEmpty {
             print("RootObject parsing errors:")
             for (name, error) in errors {
@@ -29,7 +29,7 @@ public struct KTVModelBasicMapper {
         }
     }
 
-    static private func deoptionizeValue<T>(value:T?, defaultValue:T) -> T {
+    public static func deoptionizeValue<T>(value:T?, defaultValue:T) -> T {
         if let value_ = value {
             return value_
         } else {
@@ -37,7 +37,7 @@ public struct KTVModelBasicMapper {
         }
     }
 
-    static public func getGeneralObject(name name:String, ktv:KTVObject) throws -> KTVObject? {
+    public static func getGeneralObject(name name:String, ktv:KTVObject) throws -> KTVObject? {
         var result:KTVObject? = nil
 
         if let property = ktv.properties[name], case .object(_, let object) = property {

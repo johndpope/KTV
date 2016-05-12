@@ -6,8 +6,8 @@
 import Foundation
 
 public protocol KTVMapper {
-    typealias KTVType
-    typealias SwiftType
+    associatedtype KTVType
+    associatedtype SwiftType
 
     var value:SwiftType { get set }
 

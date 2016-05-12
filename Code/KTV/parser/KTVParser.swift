@@ -402,9 +402,9 @@ public class KTVParser {
                 result = "bool"
             } else if lowerValue == "nil" || lowerValue == "null" {
                 result = "nil"
-            } else if value.stringByReplacingOccurrencesOfString("[\\+\\-]?[  \\d]+", withString:"#", options:[.RegularExpressionSearch], range:Range(value.startIndex..<value.endIndex)) == "#" {
+            } else if value.stringByReplacingOccurrencesOfString("[\\+\\-]?[\\d]+", withString:"#", options:[.RegularExpressionSearch], range:Range(value.startIndex..<value.endIndex)) == "#" {
                 result = "int"
-            } else if value.stringByReplacingOccurrencesOfString("[\\+\\-]?[  \\d]*[\\.\\,]\\d+", withString:"#", options:[.RegularExpressionSearch], range:Range(value.startIndex..<value.endIndex)) == "#" {
+            } else if value.stringByReplacingOccurrencesOfString("[\\+\\-]?[\\d]*[\\.\\,]\\d+", withString:"#", options:[.RegularExpressionSearch], range:Range(value.startIndex..<value.endIndex)) == "#" {
                 result = "double"
             } else if lowerValue.stringByReplacingOccurrencesOfString("#[0-9a-f]+", withString:"#", options:[.RegularExpressionSearch], range:Range(value.startIndex..<value.endIndex)) == "#" {
                 result = "color"

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/KTVKit-Swift.h</key>
 		<data>
-		taoblxbTOrmm7dPyJP4WCs36yt0=
+		iZ0p4ETGiHGHsyB+ARNvtYaUckw=
 		</data>
 		<key>Headers/KTVKit.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		z/PVSKDpuEz9OrDS+uvUrg3H7r0=
+		hNZ6JnG7uexDDeF+bEviJdjeABA=
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm.swiftdoc</key>
 		<data>
-		RKMwLA4WL3rz6wWduwsa0jpgamQ=
+		npwGMiu/uJajW4GztO8fpQi3RHs=
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		q5VViNUJnjME4+rwaAfAQ70HHxY=
+		pAVg8FOL6VoSZhRGqRCfsw+Xi9s=
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		DwiY2KvivB9DaBpKiHVLExxeono=
+		9sONhvxrr9Ml5Vni78JjqfyCdes=
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		+A6YYQXIzA0BgM/oYLLK57vBHX8=
+		ACLiG3cTaXnuyJol5JzKouegZjI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -40,33 +40,82 @@
 	<key>files2</key>
 	<dict>
 		<key>Headers/KTVKit-Swift.h</key>
-		<data>
-		taoblxbTOrmm7dPyJP4WCs36yt0=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			iZ0p4ETGiHGHsyB+ARNvtYaUckw=
+			</data>
+			<key>hash2</key>
+			<data>
+			zx9+NsTcEQEgcGXb18XTP7cZ2UWpOTg2RsMCdm/f6X0=
+			</data>
+		</dict>
 		<key>Headers/KTVKit.h</key>
-		<data>
-		MGpHAa5tWN6peRdMR8fk3IR/4eI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			MGpHAa5tWN6peRdMR8fk3IR/4eI=
+			</data>
+			<key>hash2</key>
+			<data>
+			hTdEIZm9XowOBhh+/yNk0ySggg9Fx+yaZv8byzD+lVM=
+			</data>
+		</dict>
 		<key>Modules/KTVKit.swiftmodule/arm.swiftdoc</key>
-		<data>
-		RKMwLA4WL3rz6wWduwsa0jpgamQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			npwGMiu/uJajW4GztO8fpQi3RHs=
+			</data>
+			<key>hash2</key>
+			<data>
+			G1Iuc/Z11cQq+CLtbWKSPdPCL2/dIgI6hDluanwkqTg=
+			</data>
+		</dict>
 		<key>Modules/KTVKit.swiftmodule/arm.swiftmodule</key>
-		<data>
-		q5VViNUJnjME4+rwaAfAQ70HHxY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			pAVg8FOL6VoSZhRGqRCfsw+Xi9s=
+			</data>
+			<key>hash2</key>
+			<data>
+			IRQO95+Nxb8SJwTj1gGr80ttqiNptsM62kwqYcRc34s=
+			</data>
+		</dict>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		DwiY2KvivB9DaBpKiHVLExxeono=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			9sONhvxrr9Ml5Vni78JjqfyCdes=
+			</data>
+			<key>hash2</key>
+			<data>
+			AwgJm03MFFjYCE0s3JGIeIfWDkJy3Q+LBWyjQlk7wMI=
+			</data>
+		</dict>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		+A6YYQXIzA0BgM/oYLLK57vBHX8=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			ACLiG3cTaXnuyJol5JzKouegZjI=
+			</data>
+			<key>hash2</key>
+			<data>
+			2C6L0CZIFpjWDIdTzA5VIw5Jj8HqTjdpTViOkaXqFKQ=
+			</data>
+		</dict>
 		<key>Modules/module.modulemap</key>
-		<data>
-		uPtowv7dcuiOfb7bI2ApcfmSCvM=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			uPtowv7dcuiOfb7bI2ApcfmSCvM=
+			</data>
+			<key>hash2</key>
+			<data>
+			anbin1HiITEov7CD2u7+m/dh9gIM6TnO511tgh+8fpA=
+			</data>
+		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>

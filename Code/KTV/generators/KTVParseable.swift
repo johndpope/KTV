@@ -26,10 +26,12 @@ enum KTVModelObjectParseableError: ErrorType {
 }
 
 /**
-Правила парсинга (по которым работает автогенеренный парсер)
+ Правила парсинга (по которым работает автогенеренный парсер)
  — если пропертя есть и тип правильный — парсим
  — если пропертя есть, но неверного типа, то ошибка
  — если проперти нет, используем значение по-умолчанию
  */
 public protocol KTVParseable {
+    init?(ktvStrict ktv:KTVObject)
+    init(ktvLenient ktv:KTVObject)
 }
