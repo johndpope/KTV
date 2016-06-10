@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension KTVValue {
     var colorValue:UIColor {

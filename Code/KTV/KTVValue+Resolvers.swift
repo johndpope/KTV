@@ -21,7 +21,7 @@ extension KTVValue {
             return nil
         }
 
-        throw KTVModelObjectParseableError.WrongStringValue
+        throw KTVObjectError.WrongStringValue
     }
 
     static func intResolver(value:KTVValue) throws -> Int? {
@@ -31,7 +31,7 @@ extension KTVValue {
             return nil
         }
 
-        throw KTVModelObjectParseableError.WrongIntValue
+        throw KTVObjectError.WrongIntValue
     }
 
     static func boolResolver(value:KTVValue) throws -> Bool? {
@@ -41,7 +41,7 @@ extension KTVValue {
             return nil
         }
 
-        throw KTVModelObjectParseableError.WrongBoolValue
+        throw KTVObjectError.WrongBoolValue
     }
 
     static func doubleResolver(value:KTVValue) throws -> Double? {
@@ -53,7 +53,7 @@ extension KTVValue {
             return nil
         }
 
-        throw KTVModelObjectParseableError.WrongDoubleValue
+        throw KTVObjectError.WrongDoubleValue
     }
 
     static func arrayResolver<T>(value:KTVValue, valueResolver:(value:KTVValue) throws -> T?) throws -> [T]? {
@@ -65,7 +65,7 @@ extension KTVValue {
                 if let value = try valueResolver(value:item) {
                     resultArray_.append(value)
                 } else {
-                    throw KTVModelObjectParseableError.WrongArrayItemValue
+                    throw KTVObjectError.WrongArrayItemValue
                 }
             }
 
@@ -73,7 +73,7 @@ extension KTVValue {
         } else if case .nilValue = value {
             return nil
         } else {
-            throw KTVModelObjectParseableError.WrongArrayValue
+            throw KTVObjectError.WrongArrayValue
         }
 
         return resultArray
@@ -88,7 +88,7 @@ extension KTVValue {
                 if let value = try valueResolver(value:item) {
                     resultDictionary_[key] = value
                 } else {
-                    throw KTVModelObjectParseableError.WrongDictionaryItemValue
+                    throw KTVObjectError.WrongDictionaryItemValue
                 }
             }
 
@@ -96,7 +96,7 @@ extension KTVValue {
         } else if case .nilValue = value {
             return nil
         } else {
-            throw KTVModelObjectParseableError.WrongDictionaryValue
+            throw KTVObjectError.WrongDictionaryValue
         }
 
         return resultDictionary
@@ -117,6 +117,6 @@ extension KTVValue {
             return nil
         }
 
-        throw KTVModelObjectParseableError.WrongDateValue
+        throw KTVObjectError.WrongDateValue
     }
 }

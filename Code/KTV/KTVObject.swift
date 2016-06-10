@@ -189,7 +189,7 @@ public class KTVObject: CustomStringConvertible {
 
 // Referencing objects of different types. With resolving references if needed.
 extension KTVObject {
-    private func valueAndReferenceForKey(key:String, resolveReferences:Bool = true) throws -> (value:KTVValue?, reference:String?) {
+    func valueAndReferenceForKey(key:String, resolveReferences:Bool = true) throws -> (value:KTVValue?, reference:String?) {
         var result:KTVValue? = properties[key]
         var reference:String? = nil
 
@@ -210,87 +210,21 @@ extension KTVObject {
         return (result, reference)
     }
 
-private func specificValueForKey<T>(key:String, defaultValue:T?, resolveReferences:Bool, valueResolver:(value:KTVValue) throws -> T?) throws -> (value:T?, reference:String?) {
-    let (resultValue, reference) = try valueAndReferenceForKey(key, resolveReferences:resolveReferences)
-    var result = defaultValue
+    func specificValueForKey<T>(key:String, defaultValue:T?, resolveReferences:Bool, valueResolver:(value:KTVValue) throws -> T?) throws -> (value:T?, reference:String?) {
+        let (resultValue, reference) = try valueAndReferenceForKey(key, resolveReferences:resolveReferences)
+        var result = defaultValue
 
-    if let result_ = resultValue {
-        result = try valueResolver(value:result_)
+        if let result_ = resultValue {
+            result = try valueResolver(value:result_)
+        }
+
+        return (result, reference)
     }
-
-    return (result, reference)
-}
 
     //MARK: values or references
 
     func valueForKey(key:String) throws -> KTVValue? {
          return try valueAndReferenceForKey(key).value
-    }
-
-    public func stringOrReference(key key:String, defaultValue:String = "", resolveReferences:Bool = true) throws -> (value:String, reference:String?) {
-        let (value, reference) = try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:resolveReferences, valueResolver:KTVValue.stringResolver)
-        if let value_ = value {
-            return (value_, reference)
-        } else {
-            return (defaultValue, reference)
-        }
-    }
-
-    public func doubleOrReference(key key:String, defaultValue:Double = 0.0, resolveReferences:Bool = true) throws -> (value:Double, reference:String?) {
-        let (value, reference) = try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:resolveReferences, valueResolver:KTVValue.doubleResolver)
-        if let value_ = value {
-            return (value_, reference)
-        } else {
-            return (defaultValue, reference)
-        }
-    }
-
-    //MARK: plain values
-
-    public func string(key key:String, defaultValue:String? = "") throws -> String? {
-        return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.stringResolver).value
-    }
-
-    public func double(key key:String, defaultValue:Double? = 0.0) throws -> Double? {
-        return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.doubleResolver).value
-    }
-
-    public func int(key key:String, defaultValue:Int? = 0) throws -> Int? {
-        return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.intResolver).value
-    }
-
-    public func bool(key key:String, defaultValue:Bool? = false) throws -> Bool? {
-        return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.boolResolver).value
-    }
-
-    public func nsDate(key key:String, defaultValue:NSDate? = NSDate()) throws -> NSDate? {
-        return try specificValueForKey(key, defaultValue:defaultValue, resolveReferences:true, valueResolver:KTVValue.dateResolver).value
-    }
-
-    public func array<T>(key key:String, defaultValue:[T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [T]? {
-        let (resultValue, _) = try valueAndReferenceForKey(key, resolveReferences:true)
-        var result:[T]? = defaultValue
-
-        if let result_ = resultValue {
-            if let result__ = try KTVValue.arrayResolver(result_, valueResolver:itemResolver) {
-                result = result__
-            }
-        }
-
-        return result
-    }
-
-    public func dictionary<T>(key key:String, defaultValue:[String:T]? = nil, itemResolver:(value:KTVValue) throws -> T?) throws -> [String:T]? {
-        let (resultValue, _) = try valueAndReferenceForKey(key, resolveReferences:true)
-        var result:[String:T]? = defaultValue
-
-        if let result_ = resultValue {
-            if let result__ = try KTVValue.dictionaryResolver(result_, valueResolver:itemResolver) {
-                result = result__
-            }
-        }
-
-        return result
     }
 }
 

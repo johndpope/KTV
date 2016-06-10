@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		hNZ6JnG7uexDDeF+bEviJdjeABA=
+		TuNvP0tWx/mDBCIR0JrGrW7hMNU=
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm.swiftmodule</key>
 		<data>
-		pAVg8FOL6VoSZhRGqRCfsw+Xi9s=
+		lMy/GqrTyIccyNomx9PXNmwKC4Y=
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ACLiG3cTaXnuyJol5JzKouegZjI=
+		wxQrfnbxE6/2nXln4TEZjGCojQc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -76,11 +76,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pAVg8FOL6VoSZhRGqRCfsw+Xi9s=
+			lMy/GqrTyIccyNomx9PXNmwKC4Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			IRQO95+Nxb8SJwTj1gGr80ttqiNptsM62kwqYcRc34s=
+			uyqkkGdooiSKYv8IGGGAmLqaxFZDQmfu4moUY8o//0A=
 			</data>
 		</dict>
 		<key>Modules/KTVKit.swiftmodule/arm64.swiftdoc</key>
@@ -98,11 +98,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ACLiG3cTaXnuyJol5JzKouegZjI=
+			wxQrfnbxE6/2nXln4TEZjGCojQc=
 			</data>
 			<key>hash2</key>
 			<data>
-			2C6L0CZIFpjWDIdTzA5VIw5Jj8HqTjdpTViOkaXqFKQ=
+			GhvUge7UPL3436YiCepxA4PluZf5VBbMqDksN4a87Dg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

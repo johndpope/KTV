@@ -6,20 +6,6 @@
 import Foundation
 
 enum KTVModelObjectParseableError: ErrorType {
-    case WrongStringValue
-    case WrongIntValue
-    case WrongDoubleValue
-    case WrongBoolValue
-
-    case WrongArrayValue
-    case WrongArrayItemValue
-    case WrongDictionaryValue
-    case WrongDictionaryItemValue
-
-    case WrongObjectValue
-
-    case WrongDateValue
-
     case ValueIsNotOptionalButWeGotNull
 
     case CantFindTypeMapper

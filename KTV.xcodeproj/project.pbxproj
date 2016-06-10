@@ -10,16 +10,19 @@
 		2DBA1030265687892DDC352C /* KTVArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA186931D7D9AC1581CEA1 /* KTVArray.swift */; };
 		2DBA109F10E21588FE0A55E0 /* KTVParseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1FE728A7E6A638A9D1FA /* KTVParseable.swift */; };
 		2DBA11C6EC9D8805397FBEB9 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA10DE64493B362427878B /* DateUtils.swift */; };
+		2DBA120A8434C63377111AFE /* KTVObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA194C159896753650D07C /* KTVObject+Helpers.swift */; };
 		2DBA123AD710CAE1157B63BE /* KTVModelMapperDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1B597A768E51BE994794 /* KTVModelMapperDouble.swift */; };
 		2DBA12697456FFE5B7324565 /* KTVModelMapperInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA102121F90D03F0D7140B /* KTVModelMapperInt.swift */; };
 		2DBA127CAD3ED4149ED08F9A /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1993A09309855DB66484 /* ColorUtils.swift */; };
 		2DBA12AA6EA114724D267350 /* KTVParserCharGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA146DF1779990AC970CED /* KTVParserCharGenerator.swift */; };
+		2DBA136F10B9F48EB88CEBD5 /* KTVObjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA12D5F153ECB23E39B876 /* KTVObjectError.swift */; };
 		2DBA142C43C6031FAC54E605 /* KTVModelMapperArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1856DEEF9BBA2C54DC19 /* KTVModelMapperArray.swift */; };
 		2DBA1455F84328D7DF5AFC88 /* KTVParseableUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA143F25417CC0D7AB82FE /* KTVParseableUtils.swift */; };
 		2DBA1475F33BD5001DDEB67C /* KTVSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11D98BFF40D59330457F /* KTVSerializable.swift */; };
 		2DBA1483B5DAF3A28BB3196B /* KTVMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1A95B396B048B2164C52 /* KTVMapper.swift */; };
 		2DBA155FFD4BC9AAFE12D9C6 /* KTVParserErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1EBA6C6CFF104797EC27 /* KTVParserErrors.swift */; };
 		2DBA159E86B81A4B6DDF4DA5 /* KTVModelBasicMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA175CB3A049E00267E7A1 /* KTVModelBasicMapper.swift */; };
+		2DBA159F15B68D4393878CCB /* KTVObjectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA12D5F153ECB23E39B876 /* KTVObjectError.swift */; };
 		2DBA176F202A2E7794C81F46 /* KTVGeneratorErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1F7B16DD6A1BD3D1B263 /* KTVGeneratorErrors.swift */; };
 		2DBA17EF53DBC40F0FA7A6EA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1543E4DBA02374C79544 /* main.swift */; };
 		2DBA182A5389F57E6477C7B3 /* KTVModelMapperBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA11384F176C912D34BA86 /* KTVModelMapperBool.swift */; };
@@ -31,6 +34,7 @@
 		2DBA1B9F9FE34F6DB4426B1F /* KTVModelMapperNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA19FCE1DC000D77BC3A74 /* KTVModelMapperNSDate.swift */; };
 		2DBA1CD826C8788DA42022AC /* KTVObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1BB5C00E638468C70B10 /* KTVObject.swift */; };
 		2DBA1D038C67D9673E0B987A /* KTVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA17E45EB44BF964545A8D /* KTVParser.swift */; };
+		2DBA1D25F664158AEBF8F9A3 /* KTVObject+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA194C159896753650D07C /* KTVObject+Helpers.swift */; };
 		2DBA1D53BBB7142B238CBD38 /* KTVValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1583D08BDC3F89104696 /* KTVValue.swift */; };
 		2DBA1DDA678C37D4BEF500EE /* KTVObject+Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA12504B49CF0E87E3B90C /* KTVObject+Generation.swift */; };
 		FA1506921C8F0E6A0002EF66 /* KTVKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1506911C8F0E6A0002EF66 /* KTVKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,6 +102,7 @@
 		2DBA116184613F4964970111 /* ktvModelGenerator-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ktvModelGenerator-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DBA11D98BFF40D59330457F /* KTVSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVSerializable.swift; sourceTree = "<group>"; };
 		2DBA12504B49CF0E87E3B90C /* KTVObject+Generation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KTVObject+Generation.swift"; sourceTree = "<group>"; };
+		2DBA12D5F153ECB23E39B876 /* KTVObjectError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVObjectError.swift; sourceTree = "<group>"; };
 		2DBA1368F43C1C3640958BDB /* KTVValue+Resolvers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KTVValue+Resolvers.swift"; sourceTree = "<group>"; };
 		2DBA143F25417CC0D7AB82FE /* KTVParseableUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVParseableUtils.swift; sourceTree = "<group>"; };
 		2DBA146DF1779990AC970CED /* KTVParserCharGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVParserCharGenerator.swift; sourceTree = "<group>"; };
@@ -111,6 +116,7 @@
 		2DBA18D3BF293A16C27FBD7C /* KTVGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVGenerator.swift; sourceTree = "<group>"; };
 		2DBA1917229A2FEDBD9B5E2B /* KTVValue+UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KTVValue+UIExtensions.swift"; sourceTree = "<group>"; };
 		2DBA1919D9AD641BB281F006 /* KTVModelMapperDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVModelMapperDictionary.swift; sourceTree = "<group>"; };
+		2DBA194C159896753650D07C /* KTVObject+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KTVObject+Helpers.swift"; sourceTree = "<group>"; };
 		2DBA1993A09309855DB66484 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		2DBA19FCE1DC000D77BC3A74 /* KTVModelMapperNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVModelMapperNSDate.swift; sourceTree = "<group>"; };
 		2DBA1A95B396B048B2164C52 /* KTVMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KTVMapper.swift; sourceTree = "<group>"; };
@@ -242,6 +248,8 @@
 				2DBA1917229A2FEDBD9B5E2B /* KTVValue+UIExtensions.swift */,
 				2DBA12504B49CF0E87E3B90C /* KTVObject+Generation.swift */,
 				2DBA1368F43C1C3640958BDB /* KTVValue+Resolvers.swift */,
+				2DBA194C159896753650D07C /* KTVObject+Helpers.swift */,
+				2DBA12D5F153ECB23E39B876 /* KTVObjectError.swift */,
 			);
 			path = KTV;
 			sourceTree = "<group>";
@@ -518,6 +526,8 @@
 				FA1506B11C8F0EBA0002EF66 /* KTVValue+Resolvers.swift in Sources */,
 				FA1506B21C8F0EBA0002EF66 /* ColorUtils.swift in Sources */,
 				FA1506B31C8F0EBA0002EF66 /* DateUtils.swift in Sources */,
+				2DBA120A8434C63377111AFE /* KTVObject+Helpers.swift in Sources */,
+				2DBA136F10B9F48EB88CEBD5 /* KTVObjectError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +589,8 @@
 				2DBA142C43C6031FAC54E605 /* KTVModelMapperArray.swift in Sources */,
 				2DBA1A6242C44E0451EA2753 /* KTVModelMapperDictionary.swift in Sources */,
 				2DBA17EF53DBC40F0FA7A6EA /* main.swift in Sources */,
+				2DBA1D25F664158AEBF8F9A3 /* KTVObject+Helpers.swift in Sources */,
+				2DBA159F15B68D4393878CCB /* KTVObjectError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
