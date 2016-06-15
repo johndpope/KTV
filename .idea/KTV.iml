@@ -4,9 +4,6 @@
     <content url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib">
       <sourceFolder url="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libclang.dylib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/Build/Intermediates/KTV.build/Debug-iphoneos/KTVKit.build/DerivedSources" />
-    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/Build/Intermediates/KTV.build/Debug/ktvModelGenerator.build/DerivedSources" />
-    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/Build/Intermediates/KTV.build/Release/ktvModelGenerator.build/DerivedSources" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/ktvModelGenerator/ktvModelGenerator-Bridging-Header.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ktvModelGenerator/main.swift" isTestSource="false" />
@@ -29,23 +26,35 @@
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/generators/KTVSerializable.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/generators/KTVModelBasicMapper.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/generators/KTVParseable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Code/KTV/KTVObject.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Code/KTV/KTVObject+Helpers.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/parser/KTVParser.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/parser/KTVParserErrors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/parser/KTVParserCharGenerator.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Code/KTV/KTVObject.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/KTVObject+Generation.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Code/KTV/KTVObject+Helpers.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTV/KTVValue+UIExtensions.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTVUtils/DateUtils.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Code/KTVUtils/ColorUtils.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/KTVKit/KTVKit.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/KTVKit/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Documentation.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Dictionary+Merge.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/File.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Module.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Clang+SourceKitten.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SyntaxMap.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Array+SourceKitten.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SourceLocation.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/CodeCompletionItem.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SourceDeclaration.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Request.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/String+SourceKitten.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/ClangTranslationUnit.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SwiftDocKey.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/JSONOutput.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Xcode.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Language.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SyntaxKind.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/clang-c/BuildSystem.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/clang-c/Index.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/clang-c/Platform.h" isTestSource="false" />
@@ -53,27 +62,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/clang-c/CXCompilationDatabase.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/clang-c/Documentation.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/clang-c/CXString.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Xcode.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SwiftDocs.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Documentation.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Text.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/String+SourceKitten.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/ClangTranslationUnit.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SwiftDocKey.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/JSONOutput.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/StatementKind.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/CodeCompletionItem.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Language.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SyntaxKind.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SwiftDeclarationKind.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SourceLocation.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Request.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/sourcekitd.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SwiftDocs.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Text.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Parameter.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/OffsetMap.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SyntaxToken.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SourceDeclaration.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/ObjCDeclarationKind.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/StatementKind.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SyntaxToken.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/SwiftDeclarationKind.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SourceKittenFramework/Structure.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Frameworks/SWXMLHash/SWXMLHash.swift" isTestSource="false" />
     </content>
